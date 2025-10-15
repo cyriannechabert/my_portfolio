@@ -7,6 +7,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import ProjectDetailPage from './components/ProjectDetailPage';
+import Experience from './components/Experience'; 
+import Expertise from './components/Expertise';
 
 // It's good practice to create a "HomePage" component for your main layout
 const HomePage = () => {
@@ -15,7 +17,9 @@ const HomePage = () => {
       <Header />
       <main>
         <About />
+        <Expertise />
         <Projects />
+        <Experience /> 
       </main>
     </>
   );
