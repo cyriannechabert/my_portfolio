@@ -1,0 +1,18 @@
+.decrypting-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: var(--heading-color);
+}
+
+.decrypting-overlay h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px var(--heading-color);
+}

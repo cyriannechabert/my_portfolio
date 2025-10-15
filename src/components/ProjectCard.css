@@ -1,113 +1,59 @@
-.project-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensures the image corners are rounded */
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add a hover effect to lift the card */
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-image {
-  width: 100%;
-  height: 200px; /* Fixed height for all cards */
-  object-fit: cover; /* Prevents image stretching */
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.card-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-/* --- Previous styles for the card --- */
-.project-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.card-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-/* --- ADD THIS NEW RULE --- */
 .project-card-link {
-  text-decoration: none; /* Removes the underline */
-  color: inherit;       /* Makes the text color normal */
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card.dossier {
+  background-color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-card.dossier:hover {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 15px var(--hover-color);
+}
+
+.dossier-header {
+  padding: 10px;
+  background-color: #333;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.dossier-body {
+  padding: 20px;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.dossier-body h3, .dossier-body p {
+  position: relative;
+  z-index: 2;
+}
+
+.subject-line, .abstract-line {
+  color: var(--paragraph-color);
+}
+
+.subject-line span, .abstract-line span {
+  color: var(--heading-color);
+  font-weight: bold;
+}
+
+.dossier-footer {
+  padding: 10px;
+  text-align: right;
+  border-top: 1px solid var(--border-color);
+  color: var(--heading-color);
+  opacity: 0.6;
 }

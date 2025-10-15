@@ -1,0 +1,112 @@
+/* --- Keep your global section styles --- */
+.experience-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 700px; /* Adjusted max-width for a single column */
+  margin: 0 auto;
+}
+
+/* REMOVED: The central vertical line is no longer needed.
+.timeline-container::after { ... }
+*/
+
+.timeline-item {
+  /* Adjusted for a single, centered column */
+  padding: 15px 0; /* Changed padding to vertical only */
+  position: relative;
+  width: 100%; /* Make each item take the full width */
+}
+
+/* REMOVED: The dots on the timeline are no longer needed.
+.timeline-item::after { ... }
+*/
+
+/* REMOVED: Left/right positioning is no longer needed for a single column.
+.timeline-container > div:nth-child(odd) { ... }
+.timeline-container > div:nth-child(even) { ... }
+.timeline-container > div:nth-child(even) .timeline-item::after { ... }
+*/
+
+/* --- The rest of the browser window styles remain the same --- */
+
+.timeline-item-content {
+  background-color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+}
+
+.browser-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-right: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.url-bar {
+  flex-grow: 1;
+  background-color: var(--background-color);
+  color: var(--paragraph-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.browser-body {
+  padding: 20px;
+}
+
+.browser-body .date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.browser-body h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.browser-body h4 {
+  margin: 5px 0 15px;
+  font-style: italic;
+  color: var(--paragraph-color);
+}
+
+.browser-body ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    /* No change needed, it already becomes a single column */
+    padding: 15px 0;
+  }
+}

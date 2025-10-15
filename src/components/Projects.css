@@ -1,13 +1,13 @@
 .projects-section {
   padding: 50px 20px;
-  background-color: #f4f4f9; /* A light background to make cards pop */
+  background-color: #000000; /* A light background to make cards pop */
   text-align: center;
 }
 
 .projects-section h2 {
   font-size: 2rem;
   margin-bottom: 40px;
-  border-bottom: 2px solid #61dafb;
+  border-bottom: 2px solid #0b910f;
   display: inline-block;
   padding-bottom: 10px;
 }

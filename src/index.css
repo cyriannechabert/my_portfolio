@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  --background-color: #000000;      /* True black */
+  --accent-color: #1a1a1a;        /* Very dark gray for cards */
+  --heading-color: #11b922;       /* A vibrant but softer "Spring Green" */
+  --paragraph-color: #b0b0b0;    /* Dim white/light gray for readability */
+  --border-color: #077d13;        /* Green for borders and accents */
+  --font-family: 'Roboto Mono', monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Make sure the rest of your index.css uses these */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--paragraph-color); /* Default text is now the softer color */
+}
+
+a {
+  color: var(--heading-color);
+  text-decoration: none; /* Remove underline for a cleaner look */
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color); /* Headings get the bright green */
+  text-shadow: 0 0 5px var(--heading-color);
 }

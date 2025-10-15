@@ -4,41 +4,61 @@ export interface ExperienceItem {
   date: string;
   title: string;
   company: string;
-  description: string[]; // Use an array for bullet points
+  description: string[];
 }
 
-// Your list of experiences, from most recent to oldest
+// Experiences, from most recent to oldest
 export const experiences: ExperienceItem[] = [
-  {
+{
     id: 1,
-    date: "May 2025 - Aug 2025",
-    title: "Mechanical Engineering Intern",
-    company: "Tesla | Palo Alto, CA",
+    date: "Sep 2025 – May 2026",
+    title: "MS in Mechanical Engineering",
+    company: "Columbia University | New York, NY",
     description: [
-      "Assisted in the design and prototyping of battery pack components using SolidWorks.",
-      "Conducted FEA simulations to analyze thermal stress on new material composites.",
-      "Collaborated with the manufacturing team to improve assembly line efficiency by 15%."
+      "Coursework: Robotics, Robotics Studio, Data Science for Mechanical Systems, Biostatistics."
     ]
   },
   {
     id: 2,
-    date: "Aug 2022 - May 2026",
-    title: "Bachelor of Science in Mechanical Engineering",
-    company: "Columbia University | New York, NY",
+    date: "Sep 2025 – Present",
+    title: "Biomedical Informatics Researcher",
+    company: "New York Genome Center | New York, NY",
     description: [
-      "Relevant Coursework: Thermodynamics, Fluid Mechanics, Control Systems, Machine Design.",
-      "Senior Capstone Project: Autonomous Delivery Drone.",
-      "GPA: 3.8/4.0"
+      "Investigating federated learning on biomedical data to improve cross-institution model generalization.",
+      "Analyzing interdependencies among 6+ hyperparameters to enhance predictive performance.",
+      "Collaborating with computational biologists to ensure data privacy and reproducibility."
     ]
   },
   {
     id: 3,
-    date: "June 2024 - Aug 2024",
-    title: "Research Assistant",
-    company: "Columbia Robotics Lab",
+    date: "Sep 2023 – Oct 2027",
+    title: "MEng in Applied Mathematics and Physics",
+    company: "Mines ParisTech - PSL University | Paris, FR",
     description: [
-      "Developed Python scripts to process sensor data from a robotic arm.",
-      "3D printed and tested custom end-effectors for various gripping tasks."
+      "Coursework: Optimization, Data Science, Probability, Continuum Mechanics, Quantum Physics.",
+      "Exchange Semester: Seoul National University (Spring 2025) — Machine Learning in Bioinformatics, Energy Systems."
     ]
-  }
+  },
+  {
+    id: 4,
+    date: "Mar 2025 – Jun 2025",
+    title: "Bioinformatics Research Intern",
+    company: "CBIO Lab, Mines ParisTech | Paris, FR",
+    description: [
+      "Rebuilt the RSApred pipeline and identified reproducibility gaps in RNA–ligand prediction models.",
+      "Designed RNA–ligand swapping experiments to study model dependency on molecular features.",
+      "Tested RNA redundancy using RNA-GLIB and improved dataset consistency."
+    ]
+  },
+  {
+    id: 5,
+    date: "Dec 2024 – Feb 2025",
+    title: "Biomechanics Intern",
+    company: "Movement Analysis Laboratory, Hôpital des Massues | Lyon, FR",
+    description: [
+      "Processed 10+ gait datasets in Python to support rehabilitation research in Virtual Reality.",
+      "Operated the Dive In Gait machine during clinical trials and patient rehabilitation sessions.",
+      "Used Unity, Blender, and C# to design immersive biomechanical training environments."
+    ]
+  },
 ];

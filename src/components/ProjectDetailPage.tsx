@@ -1,40 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import { useParams } from 'react-router-dom';
-import { projects } from '../projectData'; // Your project data
-import './ProjectDetailPage.css'; // New CSS file for styling
+import { projects } from '../projectData';
+import './ProjectDetailPage.css';
+import { TypeAnimation } from 'react-type-animation';
+import Decrypting from './Decrypting'; // Import the new component
 
 const ProjectDetailPage: React.FC = () => {
-  // The useParams hook gets the 'projectId' from the URL (e.g., /project/1)
+  // --- 1. Add state to track the decrypting process ---
+  const [isDecrypting, setIsDecrypting] = useState(true);
+
   const { projectId } = useParams();
-  
-  // Find the project with the matching ID. Note: URL params are strings.
   const project = projects.find(p => p.id === Number(projectId));
 
-  // If no project is found for the ID, show a message
+  // --- 2. Use useEffect to run a timer when the component loads ---
+  useEffect(() => {
+    // Set a timer for 1.5 seconds (1500 milliseconds)
+    const timer = setTimeout(() => {
+      setIsDecrypting(false); // After the timer, set isDecrypting to false
+    }, 1500);
+
+    // Clean up the timer if the component unmounts
+    return () => clearTimeout(timer);
+  }, []); // The empty array ensures this effect runs only once
+
+  // --- 3. Conditionally render the Decrypting component ---
+  if (isDecrypting) {
+    return <Decrypting />;
+  }
+  
+  // The rest of your component remains the same...
   if (!project) {
     return <div className="project-not-found"><h2>Project Not Found</h2></div>;
   }
 
   return (
-    <div className="project-detail-container">
-      <h1>{project.title}</h1>
-      <img src={project.imageUrl} alt={project.title} className="project-detail-image" />
-      <div className="project-detail-content">
-        <h3>Description</h3>
-        <p>{project.description}</p>
-        
-        {/* You can add more detailed sections here! */}
-        <h3>Key Skills & Technologies</h3>
-        <div className="project-skills">
-          {project.skills.map(skill => (
-            <span key={skill} className="skill-tag">{skill}</span>
+    <div className="project-detail-terminal">
+
+      <div className="project-detail-container">
+        {/* ... all your existing project detail JSX ... */}
+        <h1>{project.title}</h1>
+        <img src={project.imageUrl} alt={project.title} className="project-detail-image terminal-image" />
+        <div className="project-detail-content">
+          {project.details.map((section, index) => (
+            <div key={index} className="project-detail-section">
+              <h3> {section.heading}</h3>
+              {section.content.length > 1 ? (
+                <ul>{section.content.map((point, pointIndex) => (<li key={pointIndex}>{point}</li>))}</ul>
+              ) : (<p>{section.content[0]}</p>)}
+            </div>
           ))}
+          <h3> KEYWORDS</h3>
+          <div className="project-skills">
+            {project.skills.map(skill => (<span key={skill} className="skill-tag">{skill}</span>))}
+          </div>
         </div>
-        
-        <h3>Challenges & Solutions</h3>
-        <p>
-            (Here you could write a more in-depth explanation of the project's challenges and how you solved them.)
-        </p>
       </div>
     </div>
   );
