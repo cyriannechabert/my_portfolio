@@ -1,0 +1,23 @@
+.projects-section {
+  padding: 50px 20px;
+  background-color: #f4f4f9; /* A light background to make cards pop */
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  /* This creates a responsive grid. It will fit as many columns as possible
+     that are at least 320px wide. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px; /* Space between the cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
