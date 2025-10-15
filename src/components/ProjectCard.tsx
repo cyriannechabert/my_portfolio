@@ -2,7 +2,7 @@ import React from 'react';
 import { Project } from '../projectData';
 import './ProjectCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons'; // Import a file icon
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons'; 
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
