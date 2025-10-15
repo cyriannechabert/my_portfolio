@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../projectData';
 import './ProjectDetailPage.css';
-import { TypeAnimation } from 'react-type-animation';
 import Decrypting from './Decrypting';
 
 const ProjectDetailPage: React.FC = () => {

@@ -17,7 +17,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <p className="abstract-line"><span>ABSTRACT:</span> {project.description}</p>
         </div>
         <div className="dossier-footer">
-          <span>// Click to decrypt</span>
+          <span>{'// Click to decrypt'}</span>
         </div>
       </div>
     </a>
